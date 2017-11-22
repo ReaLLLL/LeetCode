@@ -1,9 +1,5 @@
 package com.leetcode;
 
-import java.util.Deque;
-import java.util.LinkedList;
-import java.util.Queue;
-
 /**
  * Given a 32-bit signed integer, reverse digits of an integer.
  *
