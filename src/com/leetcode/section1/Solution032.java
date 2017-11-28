@@ -1,6 +1,4 @@
-package com.leetcode;
-
-import java.util.Stack;
+package com.leetcode.section1;
 
 /**
  * Given a string containing just the characters '(' and ')', find the length of the longest valid (well-formed) parentheses substring.

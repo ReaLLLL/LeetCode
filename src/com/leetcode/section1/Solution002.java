@@ -1,4 +1,4 @@
-package com.leetcode;
+package com.leetcode.section1;
 
 /**
  * You are given two non-empty linked lists representing two non-negative integers.

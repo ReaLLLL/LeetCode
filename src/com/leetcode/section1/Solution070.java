@@ -1,4 +1,4 @@
-package com.leetcode;
+package com.leetcode.section1;
 
 /**
  * You are climbing a stair case. It takes n steps to reach to the top.

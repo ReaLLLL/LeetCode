@@ -1,4 +1,4 @@
-package com.leetcode;
+package com.leetcode.section1;
 
 /**
  * Given n, how many structurally unique BST's (binary search trees) that store values 1...n?

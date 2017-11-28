@@ -1,4 +1,4 @@
-package com.leetcode;
+package com.leetcode.section1;
 
 /**
  * Given a sorted array, remove the duplicates in-place such that each element appear only once and return the new length.

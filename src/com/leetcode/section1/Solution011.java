@@ -1,4 +1,4 @@
-package com.leetcode;
+package com.leetcode.section1;
 
 /**
  * Given n non-negative integers a1, a2, ..., an,

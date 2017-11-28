@@ -1,4 +1,4 @@
-package com.leetcode;
+package com.leetcode.section1;
 
 /**
  * Given a binary tree, determine if it is a valid binary search tree (BST).
