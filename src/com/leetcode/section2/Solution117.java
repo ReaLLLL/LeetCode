@@ -1,7 +1,7 @@
 package com.leetcode.section2;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.LinkedList;
+import java.util.Queue;
 
 /**
  * Given numRows, generate the first numRows of Pascal's triangle.
@@ -10,33 +10,34 @@ import java.util.List;
  * @version $Id: Solution117.java, v 0.1 2017年12月01日 上午12:35:35 alexsong Exp $
  */
 public class Solution117 {
-    public List<List<Integer>> generate(int numRows) {
-        List<List<Integer>> result = new ArrayList<List<Integer>>();
-        if(numRows == 0)
-            return result;
+    public void connect(TreeLinkNode root) {
+        Queue<TreeLinkNode> list1 = new LinkedList<TreeLinkNode>();
+        Queue<TreeLinkNode> list2 = new LinkedList<TreeLinkNode>();
 
-        for(int i = 1; i <= numRows; i++){
-            if(i<=2)
-                result.add(this.generate(null,i));
-            else
-                result.add(this.generate(result.get(i-2), i));
+        list1.offer(root);
+
+        while(!list1.isEmpty()){
+            TreeLinkNode t = list1.poll();
+            while(t != null){
+                if(t.left != null)
+                    list2.offer(t.left);
+                if(t.right != null)
+                    list2.offer(t.right);
+                TreeLinkNode p = list1.poll();
+                t.next = p;
+                t = p;
+            }
+
+            t = list2.poll();
+            while(t != null){
+                if(t.left != null)
+                    list1.offer(t.left);
+                if(t.right != null)
+                    list1.offer(t.right);
+                TreeLinkNode p = list2.poll();
+                t.next = p;
+                t = p;
+            }
         }
-        return result;
-    }
-
-    public List<Integer> generate(List<Integer> pre, int k){
-        List<Integer> res = new ArrayList<Integer>(k);
-        res.add(1);
-        for(int i = 1; i < k-1; i++)
-            res.add(pre.get(i-1)+pre.get(i));
-        if(k>1)
-            res.add(1);
-
-        return res;
-    }
-
-    public static void main(String[] args){
-        Solution117 s = new Solution117();
-        System.out.println(s.generate(2));
     }
 }
