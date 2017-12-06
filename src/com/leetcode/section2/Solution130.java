@@ -11,7 +11,7 @@ import java.util.LinkedList;
  */
 public class Solution130 {
     public void solve(char[][] board) {
-        //将不满足条件的O换成临时符号，剩下的全部换成X，再将临时符号换成
+        //将不满足条件的O换成临时符号，剩下的全部换成X，再将临时符号换成O
         if(board==null || board.length<=1 || board[0].length<=1)
             return;
         for(int i=0;i<board[0].length;i++)
