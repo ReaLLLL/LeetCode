@@ -4,7 +4,7 @@ package com.leetcode.section2;
 * Given S = “eceba”,
 * T is “ece” which its length is 3.
 * */
-public class Solution157 {
+public class Solution159 {
     public int lengthOfLongestSubstringTwoDistinct(String s) {
         int i=0,j=-1,ml =0;
         for(int k=1;k<s.length();k++){
